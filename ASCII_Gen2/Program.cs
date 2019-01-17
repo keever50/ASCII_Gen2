@@ -17,15 +17,15 @@ namespace ASCII_Gen2
             switch (B)
             {
                 case 0:
-                    return ":";
+                    return ".";
                 case 1:
-                    return "░";
+                    return ":";
                 case 2:
-                    return "▒";
+                    return "3";
                 case 3:
-                    return "▓";
+                    return "8";
                 case 4:
-                    return "█";
+                    return "#";
                 default:
                     return "X";
             }   
