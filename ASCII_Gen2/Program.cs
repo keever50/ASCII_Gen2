@@ -200,7 +200,7 @@ namespace ASCII_Gen2
                     
                     Color color = BM.GetPixel((int)x, (int)y);
                     Console.BackgroundColor = ConsoleColorDecoder(color);//ConsoleColorDecoder(color);
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     Put(Cx, Cy, ColorToText(color));
 
                 }
