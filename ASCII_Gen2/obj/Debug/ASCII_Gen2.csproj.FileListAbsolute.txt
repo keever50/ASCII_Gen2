@@ -1,0 +1,7 @@
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\bin\Debug\ASCII_Gen2.exe.config
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\bin\Debug\ASCII_Gen2.exe
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\bin\Debug\ASCII_Gen2.pdb
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\obj\Debug\ASCII_Gen2.csprojAssemblyReference.cache
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\obj\Debug\ASCII_Gen2.csproj.CoreCompileInputs.cache
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\obj\Debug\ASCII_Gen2.exe
+C:\Users\Aeralius\source\repos\ASCII_Gen2\ASCII_Gen2\obj\Debug\ASCII_Gen2.pdb
