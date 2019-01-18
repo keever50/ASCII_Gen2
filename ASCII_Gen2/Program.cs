@@ -74,7 +74,6 @@ namespace ASCII_Gen2
                 return ConsoleColor.DarkBlue;
             }
             else
-
             //Yellow
             if (R == 2 & G == 2 & B == 0)
             {
@@ -161,46 +160,60 @@ namespace ASCII_Gen2
                 return ConsoleColor.Gray;
             }
             else
-                return ConsoleColor.Black;
+                return ConsoleColor.DarkGray;
             
         }
 
         static void Put( int x, int y, string str)
         {
-            if (x < Console.BufferWidth & y < Console.BufferHeight)
+            if (x < Console.BufferWidth && y < Console.BufferHeight)
             {
                 Console.SetCursorPosition(x, y);
-                Console.Write(str);
+                Console.Write(str + " ");
             } 
         }
 
-        public static int w = Console.LargestWindowWidth;
-        public static int h = Console.LargestWindowHeight;
+        
+
+        public static int w = Console.BufferWidth;
+        public static int h = Console.BufferHeight;
         
         static void Main(string[] args)
         {
-            Console.SetBufferSize(w,h);
+
+            //Console.SetBufferSize(w,h);
+            if (w >= Console.LargestWindowWidth)
+            {
+                w = Console.LargestWindowWidth;
+            }
+            if (h >= Console.LargestWindowHeight)
+            {
+                h = Console.LargestWindowHeight;
+            }
             Console.SetWindowSize(w,h);
             
             Console.WriteLine("Loading image...");
-            Bitmap BM = new Bitmap(args[0]);
 
-            Console.WriteLine("Dims: " + BM.Width + "x" + BM.Height);
+            Bitmap BM = new Bitmap(args[0]);
+            int RW = BM.Width;
+            int RH = BM.Height;
+
+            Console.WriteLine("Dims: " + RW + "x" + RH);
             Console.WriteLine("Console: " + w + "x" + h);
 
             Console.WriteLine("Rendering");
             int Cx;
             int Cy;
-            for (decimal y = 1; y < BM.Height; y=y+BM.Height/h)
+            for (decimal y = 1; y < RH; y=y+RH/h)
             {
-                Cy = (int)Math.Round((y / BM.Height) * h);
-                for (decimal x = 1; x < BM.Width; x = x + BM.Width / w)
+                Cy = (int)Math.Round((y / RH) * h);
+                for (decimal x = 1; x < RW; x = x + RW / w)
                 {
-                    Cx = (int)Math.Round((x / BM.Width) * w);
+                    Cx = (int)Math.Round((x / RW) * w);
                     
                     Color color = BM.GetPixel((int)x, (int)y);
                     Console.BackgroundColor = ConsoleColorDecoder(color);//ConsoleColorDecoder(color);
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     Put(Cx, Cy, ColorToText(color));
 
                 }
