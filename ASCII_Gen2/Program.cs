@@ -157,10 +157,10 @@ namespace ASCII_Gen2
             //Gray
             if (R == 1 & G == 1 & B == 1)
             {
-                return ConsoleColor.Gray;
+                return ConsoleColor.DarkGray;
             }
             else
-                return ConsoleColor.DarkGray;
+                return ConsoleColor.Black;
             
         }
 
